@@ -4,9 +4,6 @@
 """
 
 
-from cmath import rect
-
-
 class Rectangle:
     """class Rectangle"""
 
