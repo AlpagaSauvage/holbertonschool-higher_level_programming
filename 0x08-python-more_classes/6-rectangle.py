@@ -52,7 +52,7 @@ class Rectangle:
         if self.width == 0 or self.height == 0:
             return ""
         return ("#" * self.__width + "\n") * (self.__height - 1)\
-		    + "#" * self.__width
+            + "#" * self.__width
 
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__height, self.__width)
