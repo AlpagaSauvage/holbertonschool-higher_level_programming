@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""6-rectangle.py:
+"""8-rectangle.py:
     print a rectangle
 """
 
