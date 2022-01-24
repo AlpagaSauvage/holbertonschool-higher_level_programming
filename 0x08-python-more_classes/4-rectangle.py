@@ -45,7 +45,8 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
-        return ("#" * self.__width + "\n") * (self.__height - 1) + "#" * self.__width
+        return ("#" * self.__width + "\n") * (self.__height - 1)\
+            + "#" * self.__width
 
     def __repr__(self):
         return "Rectangle({:d}, {:d})".format(self.__height, self.__width)
