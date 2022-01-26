@@ -1,5 +1,11 @@
 #!/usr/bin/python3
+""" 0-add_integer
+    add integer
+"""
+
+
 def add_integer(a, b=98):
+    """add integer"""
     try:
         return int(a + b)
     except:
