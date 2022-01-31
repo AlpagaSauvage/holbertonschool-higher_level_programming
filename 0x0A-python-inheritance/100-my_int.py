@@ -10,4 +10,4 @@ class MyInt(int):
         return int.__index__ == other
 
     def __ne__(self, other):
-        return int.__index != other
+        return int.__index__ != other
