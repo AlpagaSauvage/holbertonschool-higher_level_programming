@@ -1,0 +1,42 @@
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+    >>> BaseGeometry.integer_validator(1, 'jhon', 2)
+    2
+	
+    >>> BaseGeometry.integer_validator(1, 'jhon', -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: jhon must be greater than 0
+
+    >>> BaseGeometry.integer_validator(1, 'jhon', 0)
+    Traceback (most recent call last):
+	...
+    ValueError: jhon must be greater than 0
+
+    >>> BaseGeometry.integer_validator(1, 5, 1)
+    1
+
+    >>> BaseGeometry.integer_validator(1, 'jhon', )
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+    >>> BaseGeometry.integer_validator(1, 'jhon', 5.4)
+    Traceback (most recent call last):
+    ...
+    TypeError: jhon must be an integer
+
+    >>> BaseGeometry.integer_validator(1, )
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+    >>> BaseGeometry.integer_validator(1, 'jhon', [1, 2, 3])
+    Traceback (most recent call last):
+    ...
+    TypeError: jhon must be an integer
+
+    >>> BaseGeometry.integer_validator(1, [1, 2, 3], 'jhon')
+    Traceback (most recent call last):
+    ...
+    TypeError: can only concatenate list (not "str") to list
