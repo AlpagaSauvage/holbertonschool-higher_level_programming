@@ -8,5 +8,6 @@ import json
 
 
 def load_from_json_file(filename):
+    """ return from jsoon file"""
     with open(filename, 'r') as f:
         f.read()
