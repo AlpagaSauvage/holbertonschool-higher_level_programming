@@ -1,4 +1,4 @@
-#!/usr/bin/
+#!/usr/bin/pyton3
 """ 4-from_json_string
     from json to string
 """
