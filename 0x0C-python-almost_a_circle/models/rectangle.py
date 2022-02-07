@@ -91,7 +91,7 @@ class Rectangle(Base):
         if self.__width == 0 or self.__height == 0:
             return ""
         print((" " * self.__x + "#" * self.__width + "\n") *
-            (self.__height - 1) + " " * self.__x + "#" * self.__width)
+              (self.__height - 1) + " " * self.__x + "#" * self.__width)
 
     def __str__(self):
         """string of rectangle"""
