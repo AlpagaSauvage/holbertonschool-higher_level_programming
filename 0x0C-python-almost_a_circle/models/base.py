@@ -38,5 +38,5 @@ class Base:
         with open(cls.__name__ + ".json", "w+") as f:
             if list_objs is None:
                 f.write("[]")
-            else: 
+            else:
                 f.write(parsed)
