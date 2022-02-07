@@ -34,3 +34,27 @@ class Square(Rectangle):
         """ Definition of the square """
         return "[Square] ({}) {}/{} - {}"\
             .format(self.id, self.__x, self.__y, self.__size)
+
+    def update(self, *args, **kwargs):
+        """update"""
+        if len(args):
+            i = 0
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.size = arg
+                if i == 2:
+                    self.x = arg
+                if i == 3:
+                    self.y = arg
+                i += 1
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "size" in kwargs:
+                self.width = kwargs["size"]
+            if "x" in kwargs:
+                self.height = kwargs["x"]
+            if "y" in kwargs:
+                self.x = kwargs["y"]
