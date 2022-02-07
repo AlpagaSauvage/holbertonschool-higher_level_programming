@@ -16,10 +16,10 @@ class Rectangle(Base):
         size : width, height
             the size of the rectangle.
         """
-        self.__height = height
-        self.__width = width
-        self.__x = x
-        self.__y = y
+        self.height = height
+        self.width = width
+        self.x = x
+        self.y = y
 
         if id is not None:
             self.id = id
