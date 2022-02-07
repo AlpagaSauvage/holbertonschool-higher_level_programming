@@ -30,6 +30,10 @@ class Square(Rectangle):
         else:
             self.__size = value
 
+    @property
+    def x(self):
+        return self.__x
+
     @x.setter
     def x(self, value):
         if type(value) is not int:
