@@ -12,8 +12,8 @@ class Square(Rectangle):
     def __init__(self, size, x=0, y=0, id=None):
         """init of square"""
         self.size = size
-        self.__x = x
-        self.__y = y
+        self.x = x
+        self.y = y
         self.id = id
         super().__init__(size, size, x, y, id)
 
@@ -24,11 +24,33 @@ class Square(Rectangle):
     @size.setter
     def size(self, value):
         if type(value) is not int:
-            raise TypeError('size must be an integer')
+            raise TypeError('width must be an integer')
         if value <= 0:
-            raise ValueError('size must be > 0')
+            raise ValueError('width must be > 0')
         else:
             self.__size = value
+
+    @x.setter
+    def x(self, value):
+        if type(value) is not int:
+            raise TypeError('x must be an integer')
+        if value < 0:
+            raise ValueError('x must be >= 0')
+        else:
+            self.__x = value
+
+    @property
+    def y(self):
+        return self.__y
+
+    @y.setter
+    def y(self, value):
+        if type(value) is not int:
+            raise TypeError('y must be an integer')
+        if value < 0:
+            raise ValueError('y must be >= 0')
+        else:
+            self.__y = value
 
     def __str__(self):
         """ Definition of the square """
