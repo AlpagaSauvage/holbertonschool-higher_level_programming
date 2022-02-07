@@ -97,3 +97,31 @@ class Rectangle(Base):
         """string of rectangle"""
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}"\
             .format(self.id, self.__x, self.__y, self.__width, self.__height)
+
+    def update(self, *args, **kwargs):
+        """update"""
+        if len(args):
+            i = 0
+            for arg in args:
+                if i == 0:
+                    self.id = arg
+                if i == 1:
+                    self.width = arg
+                if i == 2:
+                    self.height = arg
+                if i == 3:
+                    self.x = arg
+                if i == 4:
+                    self.y = arg
+                i += 1
+        else:
+            if "id" in kwargs:
+                self.id = kwargs["id"]
+            if "width" in kwargs:
+                self.width = kwargs["width"]
+            if "height" in kwargs:
+                self.height = kwargs["height"]
+            if "x" in kwargs:
+                self.x = kwargs["x"]
+            if "y" in kwargs:
+                self.y = kwargs["y"]
