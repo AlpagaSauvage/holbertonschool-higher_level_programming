@@ -5,6 +5,7 @@
 
 
 from models.rectangle import Rectangle
+from models.base import Base
 
 
 class Square(Rectangle):
@@ -58,3 +59,7 @@ class Square(Rectangle):
     def to_dictionary(self):
         """return the dictionnary of Rectangle"""
         return {'id': self.id, 'x': self.x, 'size': self.size, 'y': self.y}
+
+    def save_to_file(items):
+        """Save to a file"""
+        Base.save_to_file(Square, items)

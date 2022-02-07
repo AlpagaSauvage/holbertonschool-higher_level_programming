@@ -130,3 +130,7 @@ class Rectangle(Base):
         """return the dictionnary of Rectangle"""
         return {'x': self.x, 'y': self.y, 'id': self.id,
                 'height': self.height, "width": self.width}
+
+    def save_to_file(items):
+        """Save to a file"""
+        Base.save_to_file(Rectangle, items)
