@@ -19,21 +19,17 @@ class Square(Rectangle):
 
     @property
     def size(self):
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
-        if type(value) is not int:
-            raise TypeError('width must be an integer')
-        if value <= 0:
-            raise ValueError('width must be > 0')
-        else:
-            self.__size = value
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """ Definition of the square """
         return "[Square] ({}) {}/{} - {}"\
-            .format(self.id, self.__x, self.__y, self.__size)
+            .format(self.id, self.__x, self.__y, self.size)
 
     def update(self, *args, **kwargs):
         """update"""
