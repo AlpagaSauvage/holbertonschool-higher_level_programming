@@ -1,17 +1,21 @@
 #!/usr/bin/python3
+""" Cities by states
+"""
 
 import MySQLdb
 import sys
 
-user = sys.argv[1]
-passwd = sys.argv[2]
-db = sys.argv[3]
+if __name__ == "__main__":
 
-db = MySQLdb.connect(host='localhost', user=user, passwd=passwd, db=db)
-cursor = db.cursor()
-cursor.execute("SELECT state_id, cities.name, states.name FROM states JOIN\
-    cities WHERE states.id = state_id")
-result = cursor.fetchall()
+    user = sys.argv[1]
+    passwd = sys.argv[2]
+    db = sys.argv[3]
 
-for x in result:
-    print(x)
+    db = MySQLdb.connect(host='localhost', user=user, passwd=passwd, db=db)
+    cursor = db.cursor()
+    cursor.execute("SELECT state_id, cities.name, states.name FROM states JOIN\
+        cities WHERE states.id = state_id")
+    result = cursor.fetchall()
+
+    for x in result:
+        print(x)
