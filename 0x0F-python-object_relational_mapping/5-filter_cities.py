@@ -16,9 +16,13 @@ if __name__ == "__main__":
     cursor.execute("SELECT cities.name FROM states JOIN cities\
             WHERE states.id = state_id AND states.name = %s;", (sys.argv[4],))
     result = cursor.fetchall()
+    i = 0
 
     for x in range(len(result)):
+        i = 1
         if x == len(result) - 1:
             print(result[x][0])
         else:
             print(result[x][0] + ", ", end="")
+    if i != 1:
+        print("")
