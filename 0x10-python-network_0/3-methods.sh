@@ -1,3 +1,3 @@
 #!/bin/bash
 # cURL only methods
-curl -sv "$1"
+curl -X OPTIONS "$1" -si
