@@ -1,3 +1,3 @@
 #!/bin/bash
 # cURL Method
-curl -sX "$1"
+curl -sH "$1"
