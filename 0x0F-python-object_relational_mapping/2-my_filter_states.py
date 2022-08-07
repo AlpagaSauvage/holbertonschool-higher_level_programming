@@ -16,4 +16,5 @@ if __name__ == "__main__":
     result = mycursor.fetchall()
 
     for x in result:
-        print("{}".format(x))
+        if x[1] == sys.argv[4]:
+            print("{}".format(x))
