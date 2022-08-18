@@ -1,3 +1,3 @@
 #!/bin/bash
 # body size
-curl -sI "$1" -eq 200
+curl -s "$1" -L --fail
