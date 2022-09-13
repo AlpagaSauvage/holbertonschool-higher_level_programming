@@ -8,9 +8,9 @@ axios.get(process.argv[2]).then(resp => {
     process.argv[3],
     resp.data,
     function (err) {
-		  if (err) {
+      if (err) {
         return console.error(err);
-		  }
+      }
     }
-	  );
+  );
 });
